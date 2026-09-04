@@ -16,8 +16,8 @@ public class Enemy : Character
 
     // public Character otherCharacter;
 
-    // void TestAccess()
-    // {
+    //  void TestAccess()
+    //  {
     //     otherCharacter.health = 9999;
-    // }
+    //  }
 }

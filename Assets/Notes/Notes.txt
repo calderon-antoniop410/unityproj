@@ -1,0 +1,28 @@
+Lifecycle explanation:
+Game starts
+   ↓
+Awake()       once
+   ↓
+OnEnable()    once, if enabled
+   ↓
+Start()       once
+   ↓
+Update()      frame 1
+   ↓
+Update()      frame 2
+   ↓
+Update()      frame 3
+   ↓
+... so if game is on 60 fps, that is 60 updates per second
+
+
+8.) Health should be serializedfield protected with a public method instead of just public for encapsulation.
+This is because so if you are working with other people health isn't somehow directly effected by someone else.
+As well as having more understanding with public functions on how that variable is changing instead of it just
+being assigned something without understanding why.
+
+9.)
+
+
+
+10.)

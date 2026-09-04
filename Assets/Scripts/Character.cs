@@ -8,4 +8,10 @@ public class Character : MonoBehaviour
         health -= amount;
         Debug.Log(gameObject.name + " took " + amount + " damage.");
     }
+
+    public void Heal(int amount)
+    {
+        health += amount;
+        Debug.Log(gameObject.name + " healed " + amount + " health.");
+    }
 }

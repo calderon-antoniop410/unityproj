@@ -4,10 +4,9 @@ public class BossEnemy : Enemy
 {
     private void Start()
     {
-        TakeDamage(25);
-        TakeDamage(25);
-        TakeDamage(25);
-        TakeDamage(25);
+        TakeDamage(75);
+        Heal(35);
+        TakeDamage(60);
     }
 
     public override void TakeDamage(int amount)

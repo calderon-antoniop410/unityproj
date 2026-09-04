@@ -22,6 +22,11 @@ public class LifecycleLogger : MonoBehaviour
         if(Time.frameCount < 3) Debug.Log("Update, frame " + Time.frameCount);
     }
 
+    private void FixedUpdate()
+    {
+        if(Time.frameCount < 3) Debug.Log("FixedUpdate, frame " + Time.frameCount);
+    }
+
     private void OnDisable()
     {
         Debug.Log("OnDisable called by " + gameObject.name);

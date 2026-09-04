@@ -1,0 +1,18 @@
+1.) Awake() will always happens before call because that is the first "function" when the scene begins/initalizes
+
+3.) FixedUpdate() is meant for physics and Rigidbody code because it runs at a consistent time interval,
+ while Update() runs once per rendered frame, say you can use update to detect physics or ridgidbody code
+ every frame and than use fixedupdate to generate your request
+
+ 8.) Health should be serializedfield protected with a public method instead of just public for encapsulation.
+This is because so if you are working with other people health isn't somehow directly effected by someone else.
+As well as having more understanding with public functions on how that variable is changing instead of it just
+being assigned something without understanding why.
+
+9.) The NullReferenceException meant that stats was null because GetComponent<PlayerStats>() did not find a PlayerStats 
+component on the GameObject.  I changed the code to add or attach a PlayerStats component before trying to read stats.score
+
+10.) The MissingComponentException happened because the GameObject did not have an AudioSource component attached, so 
+GetComponent<AudioSource>() returned null and the code could not call Play(). I fixed it by checking whether audioSource 
+was null before calling Play() and displaying a message when the component was missing.
+
