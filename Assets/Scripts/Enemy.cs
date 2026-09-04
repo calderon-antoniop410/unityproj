@@ -11,6 +11,13 @@ public class Enemy : Character
     public override void TakeDamage(int amount)
     {
         base.TakeDamage(amount);
-        if(health <= 0) Debug.Log(gameObject.name + " defeated.");
+        if (health <= 0) Debug.Log(gameObject.name + " defeated.");
     }
+
+    // public Character otherCharacter;
+
+    // void TestAccess()
+    // {
+    //     otherCharacter.health = 9999;
+    // }
 }
