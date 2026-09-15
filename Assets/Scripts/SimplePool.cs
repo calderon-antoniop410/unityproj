@@ -9,13 +9,13 @@ public class SimplePool : MonoBehaviour
 
     private void Awake()
     {
-        // // Use this one for slide 13.
-        // for (int i = 0; i < poolSize; i++)
-        // {
-        //     GameObject obj = Instantiate(prefab);
-        //     obj.SetActive(false);
-        //     pool.Add(obj);
-        // }
+        // Use this one for slide 13.
+        for (int i = 0; i < poolSize; i++)
+        {
+            GameObject obj = Instantiate(prefab);
+            obj.SetActive(false);
+            pool.Add(obj);
+        }
     }
 
     // Use this one for slide 14.
@@ -29,6 +29,9 @@ public class SimplePool : MonoBehaviour
                 return obj;
             }
         }
-        return null;
+        GameObject newObject = Instantiate(prefab);
+        pool.Add(newObject);
+        newObject.SetActive(true);
+        return newObject;
     }
 }

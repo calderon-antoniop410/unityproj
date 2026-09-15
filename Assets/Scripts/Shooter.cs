@@ -3,20 +3,20 @@ using UnityEngine.InputSystem;
 
 public class Shooter : MonoBehaviour
 {
-    // Use this one for slide 8. Drag the Bullet prefab into this slot.
+    // // Use this one for slide 8. Drag the Bullet prefab into this slot.
     // public GameObject bulletPrefab;
 
-    // Use this one for slide 14. Drag PoolManager into this slot instead.
-    public SimplePool pool;
+    // // Use this one for slide 14. Drag PoolManager into this slot instead.
+     public SimplePool pool;
 
-    private void Update()
-    {
-        // Use Keyboard.current instead of Input.GetKeyDown if your project's
-        // Active Input Handling is "Input System Package (New)" only,
-        // Project Settings > Player > Active Input Handling.
-        if (Keyboard.current.spaceKey.wasPressedThisFrame)
-            Fire();
-    }
+     private void Update()
+     {
+         // Use Keyboard.current instead of Input.GetKeyDown if your project's
+         // Active Input Handling is "Input System Package (New)" only,
+         // Project Settings > Player > Active Input Handling.
+         if (Keyboard.current.spaceKey.wasPressedThisFrame)
+             Fire();
+     }
 
     private void Fire()
     {

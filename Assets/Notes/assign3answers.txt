@@ -1,0 +1,51 @@
+Exercise 1) MoverDemo.cs demonstrates how to move and rotate a GameObject in Unity over time. 
+It uses transform.Translate() to move the object and transform.Rotate() to rotate it around the Z axis. 
+Time.deltaTime keeps both the movement and rotation consistent even when the frame rate changes. 
+The script I made also records the GameObject's starting and ending position and rotation after a few seconds.
+Starting Positions:
+
+Bullet 1: (-6.29, -0.10, 0.00)
+Bullet 2: (-6.29, -0.10, 0.00)
+Bullet 3: (-6.29, -0.10, 0.00)
+
+Ending Positions:
+
+Bullet 1: (-5.02, -121.94, 0.00)
+Bullet 2: (-5.02, -121.94, 0.00)
+Bullet 3: (-5.02, -121.94, 0.00)
+
+Starting Rotations:
+
+Bullet 1: (0.00000, 0.00000, 0.00000, 1.00000)
+Bullet 2: (0.00000, 0.00000, 0.00000, 1.00000)
+Bullet 3: (0.00000, 0.00000, 0.00000, 1.00000)
+
+Ending Rotations:
+
+Bullet 1: (0.00000, 0.00000, 0.70724, 0.70697)
+Bullet 2: (0.00000, 0.00000, 0.70760, 0.70661)
+Bullet 3: (0.00000, 0.00000, 0.70754, 0.70668)
+
+Bullets fall straight down due to bullet gravity, but that can be disabled so bullet can continue with
+no gravity
+
+
+Exercise 5) We covered this in class that creating these layers override any actual 2d or physics that we 
+have attatched to any game objects. This is good for overriding objects we dont want interacting with others in
+our game.
+
+Exercise 8) We do pooling so that we dont use less memory in instances where our game object is being used 
+constantly like bullets, we can have hundreds so we just reuse the same ones instead of wasting memory.
+
+Exercise 12) My prediction is that we are checking for an object that is active but with pooling it should 
+be searching for objects that are off/inactive
+
+Exercise 14) I made a small scene of 2 "players" one providing the pool of bullets which woudl should the other
+player and log it showing enemy hit. This instance is just 2 shapes since I dont have sprites yet. Same thing with
+adding a neutral object which is just a square right now.
+
+Exercise 15)  Prefab asset is like a template we plan on using over and over in real time. 
+We use isntantiate to create a new copy of the prefab and that costs us memory for every one we create.
+This is where we do pooling and reuse an existing pooled object and we turn it on or off so we can do that.
+Dynamically growing a pool creates new objects only when the original pool runs out which can cause a performance
+spike in that moment, and instantiating every time repeatedly just pays the cost of memory during gameplay.

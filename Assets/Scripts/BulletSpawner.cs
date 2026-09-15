@@ -5,7 +5,7 @@ public class Bullet : MonoBehaviour
     private void Start()
     {
         // Use this one for slide 9.
-        Destroy(gameObject, 2f);
+        // Destroy(gameObject, 2f);
 
         // Comment out the line above before slide 13. Pooling replaces
         // Destroy() entirely, otherwise pooled bullets break after 2 seconds.
