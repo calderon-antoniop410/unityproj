@@ -1,0 +1,4 @@
+Exercise 2:
+one staged file is all our assets , and an ignored folder is something like usersettings.
+Unity's meta files are needed because they have unique Ids and without them Unity wouldn't be able to
+maintain the connection between the files in your project.
