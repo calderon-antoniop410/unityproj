@@ -2,3 +2,38 @@ Exercise 2:
 one staged file is all our assets , and an ignored folder is something like usersettings.
 Unity's meta files are needed because they have unique Ids and without them Unity wouldn't be able to
 maintain the connection between the files in your project.
+
+
+Exercise 4:
+Auto-merging Assets/Scenes/CheckpointTest.unity
+CONFLICT (content): Merge conflict in Assets/Scenes/CheckpointTest.unity
+Automatic merge failed; fix conflicts and then commit the result.
+
+Git can't merge these 2 or choose one because both branches are from the same commit and have edited the same lines of code,
+so git can't choose between which one is right or wrong so its up to the developer.
+
+
+Exercise 5:
+
+PS C:\Users\AP\Desktop\Unity Projects\cpsc386\unityproj> git checkout --ours -- .\Assets\Scenes\CheckpointTest.unity
+PS C:\Users\AP\Desktop\Unity Projects\cpsc386\unityproj> git add Assets/Scenes/CheckpointTest.unity
+PS C:\Users\AP\Desktop\Unity Projects\cpsc386\unityproj> git commit -m "Resolved merge conflict keeping spawn-left position"
+[spawn-left 58d398f] Resolved merge conflict keeping spawn-left position
+
+Exercise 7:
+Since code is multiplying by input vector, 0 gives no movement and holding a direectional key gives 1,0 movement
+making it move by whatever speed you have set, so thats how it stops instantly.
+Time.deltatime makes speed frame rate independant because there is an underlying math equation that basically
+offsets the speed being dependant on fps.
+
+Exercise 8:
+The key binding does not matter it stays attatched to the same action, Interact in this case,
+the send message is meant to get that named action
+
+Exercise 10: I predict after deletion the savepoint will be 0, because that is the default fallback value that is
+set if no checkpoint is found.
+
+SetInt stores a named key-value pair when a checkpoint is triggered
+Save , saves the modified key value pair from emmory into local hard disk.
+GetInt reads value associated with the checkpoint from storage, and has a default value if none found
+DeleteKey permanently removes checkpoint from storage, resetting progress.

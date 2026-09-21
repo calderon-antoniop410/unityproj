@@ -10,8 +10,7 @@ public class CheckpointSaver : MonoBehaviour
     {
         // Loads saved checkpoint on start (defaults to 0 if key does not exist)
         
-        // TEMPORARY RESET CODE FOR EXERCISE 10:
-        // Uncomment these two lines for ONE test run to clear the saved key:
+        // code for exercise 10
         // PlayerPrefs.DeleteKey("PlayerCheckpoint");
         // PlayerPrefs.Save();
 
