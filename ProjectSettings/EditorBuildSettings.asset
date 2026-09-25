@@ -6,8 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Scenes/Level1.unity
+    guid: b92c0f655aca5998d9a85b6ea35697b0
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: e60fd9f3f66b77c629dc47951cb1af00
+  - enabled: 1
+    path: Assets/Scenes/PauseMenuUI.unity
+    guid: 156af25a3940a492c846060388610e47
   m_configObjects:
     com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
